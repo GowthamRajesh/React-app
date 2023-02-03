@@ -1,6 +1,8 @@
 import React, { Component } from "react";
 import ReactDOM from "react-dom";
-import axios from "axios";
+// import { Route, Routes, useNavigate } from 'react-router-dom';
+// import axios from "axios";
+// import $ from 'jquery';
 // import oauth from 'axios-oauth-client'
 // var request = require('request');
 // import { request } from "request";
@@ -86,23 +88,48 @@ async function api() {
   //   console.log(error,"error")
   // }
 
-  var config = {
-    method: 'get',
-    url: 'https://uat.auth.starhub.com/oauth/authorize?response_type=code&client_id=Zee5Bjd6ZKtE31KwDxM3jqssErOWG8EMXujMa24eZBu&redirect_uri=https://evto7vgeak.execute-api.us-east-1.amazonaws.com/auth/callback',
-    headers:{
-      "Access-Control-Allow-Origin": "*",
-      "Vary": "Origin",
-      accept: '*/*',
-    }
-  };
-  
-  axios(config)
-  .then(function (response) {
-    console.log(JSON.stringify(response.data));
-  })
-  .catch(function (error) {
-    console.log(error);
-  });
+  // var url = "https://gowtham1.free.beeceptor.com/datta";
+  // var url = "https://uat.auth.starhub.com/oauth/authorize?response_type=code&client_id=Zee5Bjd6ZKtE31KwDxM3jqssErOWG8EMXujMa24eZBu&redirect_uri=https://evto7vgeak.execute-api.us-east-1.amazonaws.com/auth/callback"
+// var url="https://evto7vgeak.execute-api.us-east-1.amazonaws.com/auth/callback"
+  // var config = {
+  //   method: 'GET',
+  //   url: url,
+  //   data:{},
+  //   headers:{
+  //     "Access-Control-Allow-Origin":"*"
+      // "Access-Control-Allow-Origin": "*",
+      // "access-control-allow-headers":"Origin",
+      // "Host": "uat.auth.starhub.com",
+      // "Access-Control-Expose-Headers": "*",
+      // "Vary": "Origin",
+      // accept: '*/*',
+      // withCredentials: true,
+      // "Content-Type": "application/json"
+
+    // }
+  // };
+  // axios(config)
+  // .then(function (response) {
+  //   console.log(JSON.stringify(response.data));
+  // })
+  // .catch(function (error) {
+  //   console.log(error);
+  //   // Redirect("https://uat.auth.starhub.com/oauth/authorize?response_type=code&client_id=Zee5Bjd6ZKtE31KwDxM3jqssErOWG8EMXujMa24eZBu&redirect_uri=https://evto7vgeak.execute-api.us-east-1.amazonaws.com/auth/callback")
+  // });
+
+  // var settings = {
+  //   url: url,
+  //   method: "GET",
+  //   timeout: 0,
+  //   headers: {
+  //     // Accept: "application/json",
+  //     "Access-Control-Allow-Origin": "*",
+  //   },
+  // };
+  // return $.ajax(settings).done(function (response) {
+  //   console.log(response,"as")
+  //   // return response;
+  // });
 
   // var options = {
   //   'method': 'GET',
@@ -150,6 +177,7 @@ const notifySuccess = (value) => {
 
 
 let handleOnChange = (event) => {
+  
   event.preventDefault();
   let email = document.querySelector(".email").value;
   // let confirmPwd = document.querySelector(".confirmPwd").value;
@@ -264,34 +292,34 @@ function App() {
             <div className="row">
               <div className="input-group">
                 <label htmlFor="">Email / Phone Number</label>
-                <input className="email" type="text" />
+                <input className="email" type="text" required />
               </div>
             </div>
             <div className="row">
               <div className="input-group">
                 <label htmlFor="">Password</label>
-                <input className="pwd" type="password" />
+                <input className="pwd" type="password" required />
               </div>
             </div>
           </div>
           <div className="form-footer">
             <input
-              type="button"
+              type = "button"
               className="btn"
               value="Login"
               onClick={(event) => {
-                api(event);
-                // renderData(event);
                 handleOnChange(event);
+                // api(event);
+                //  renderData(event);
                 console.log("flag---",flag);
                 // notify();
               if( flag == true)
                 {
+                window.location.href="https://uat.auth.starhub.com/oauth/authorize?response_type=code&client_id=Zee5Bjd6ZKtE31KwDxM3jqssErOWG8EMXujMa24eZBu&redirect_uri=https://evto7vgeak.execute-api.us-east-1.amazonaws.com/auth/callback"
                   console.log(" trueclick");
-                  setTimeout(renderData(event), 100000); 
+                  // setTimeout(renderData(event), 100000); 
                   // renderData(event);
                 }
-              
               }
             }
             />

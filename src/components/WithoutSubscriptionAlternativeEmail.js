@@ -5,11 +5,7 @@ import React from "react";
 function WithoutSubscriptionAlternativeEmail() {
   return (
     <div>
-
-
     <div className="overlay"></div>
-
-
     <div className="subscribe">
       <div className="subscribe-container">
         
