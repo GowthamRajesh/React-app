@@ -13,6 +13,47 @@
   }
 }
 
+.img-logo {
+  height: 50px;
+  width: 50px;
+}
+
+.str-logo {
+  height: 90px;
+  width: 100px;
+}
+
+.starhub-logo {
+  position: absolute;
+  left: 12%;
+  top: 5%;
+  size: 2 rem;
+  transform: translate(10%, 10%);
+  z-index: 12;
+  margin-top: -30px;
+  margin-left: px;
+}
+
+.logo {
+  position: absolute;
+  left: 5%;
+  top: 5%;
+  transform: translate(-5%, -5%);
+  z-index: 11;
+}
+
+.subscribe-msg p{
+  margin-top: 20px;
+  margin-bottom: 25px;
+}
+
+.subscribe-msg {
+  color: white;
+  font-size: 20px;
+  text-align: center;
+  font-family: sans-serif;
+}
+
 .App-header {
   background-color: #282c34;
   min-height: 100vh;

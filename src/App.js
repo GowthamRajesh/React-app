@@ -5,7 +5,13 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
+        <div className="logo">
+        <img src="./images/ZEE5_logo.png" className="img-logo" alt="" />
+      </div>
+      <div className="starhub-logo">
+        <img src="./images/starhub-logo.png" className="str-logo" alt="" />
+      </div>
+        {/* <img src={logo} className="App-logo" alt="logo" />
         <p>
           Edit <code>src/App.js</code> and save to reload.
         </p>
@@ -16,7 +22,11 @@ function App() {
           rel="noopener noreferrer"
         >
           Learn React
-        </a>
+        </a> */}
+        <div className="subscribe-msg">
+          <p>Failed to login. Please try login with valid credentials</p>
+        </div>
+
       </header>
     </div>
   );
